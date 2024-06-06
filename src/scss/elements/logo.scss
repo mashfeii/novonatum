@@ -1,0 +1,39 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: rem(11);
+    }
+  }
+  &__title {
+    position: relative;
+    padding-right: rem(11);
+
+    font-size: rem(20);
+    line-height: math.div(30, 20);
+    color: #008c9f;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-60%);
+      align-self: flex-start;
+      width: rem(1);
+      height: rem(19);
+      background-color: var(--clr-accent-primary);
+    }
+
+    &:not(:last-child) {
+      margin-right: rem(11);
+    }
+  }
+  &__description {
+    font-size: rem(14);
+    line-height: math.div(30, 14);
+    color: var(--clr--accent-primary);
+  }
+}

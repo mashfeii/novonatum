@@ -1,0 +1,31 @@
+.cases {
+  &__container {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__images {
+    cursor: grab;
+    @extend %ml;
+    padding-left: rem(5);
+    @media (min-width: em(1729.98)) {
+      padding-left: rem(20);
+    }
+  }
+
+  &__image {
+    display: flex !important;
+    align-items: flex-end;
+    flex: 0 0 rem(450);
+    width: rem(450);
+    height: rem(450);
+
+    &:not(:last-child) {
+      margin-right: rem(20);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

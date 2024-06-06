@@ -1,0 +1,151 @@
+.menu {
+  &__body {
+    > ul {
+      display: flex;
+      align-items: center;
+      padding: rem(12) rem(13);
+      gap: rem(21);
+      background: var(--clr-back-primary);
+      border-radius: rem(38);
+    }
+    > ul > li {
+    }
+    > ul > li:hover ul {
+      // transform: translateY(0);
+      // opacity: 1;
+      // visibility: visible;
+      // pointer-events: all;
+    }
+    > ul > li > a {
+      padding: rem(6) rem(12);
+      border-radius: 17px;
+
+      font-size: rem(16);
+      line-height: math.div(30, 16);
+      font-variant: all-small-caps;
+      transition:
+        background-color 0.32s ease,
+        color 0.32s ease-in-out;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--clr-white);
+          background-color: rgba(34, 86, 123, 0.5);
+        }
+      }
+
+      li.active & {
+        background: var(--clr-accent-primary);
+        color: var(--clr-white);
+      }
+    }
+    > ul > li ul {
+    }
+    > ul > li ul li {
+    }
+    > ul > li ul li a {
+    }
+  }
+}
+
+//====================================================================================================
+.icon-menu {
+  display: none;
+  @media (max-width: $mb) {
+    display: block;
+    position: relative;
+    width: rem(22);
+    height: rem(16);
+    cursor: pointer;
+    z-index: 31;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.35s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: var(--clr-white);
+      border-radius: 20px;
+    }
+    &::before {
+      top: 0;
+      animation: menu07-bar01 0.55s forwards;
+    }
+    span {
+      top: calc(50% - rem(1));
+      transition: all 0.25s 0.25s;
+      opacity: 1;
+    }
+    &::after {
+      bottom: 0;
+      animation: menu07-bar03 0.55s forwards;
+    }
+    .menu-open & {
+      &::before {
+        animation: active-menu07-bar01 0.55s forwards;
+      }
+      span {
+        opacity: 0;
+      }
+      &::after {
+        animation: active-menu07-bar03 0.55s forwards;
+      }
+    }
+  }
+}
+
+@keyframes menu07-bar01 {
+  0% {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes menu07-bar03 {
+  0% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes active-menu07-bar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(7px) rotate(45deg);
+  }
+}
+@keyframes active-menu07-bar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
