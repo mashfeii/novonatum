@@ -29,5 +29,5 @@ export const path = {
   buildFolder: buildFolder,
   rootFolder: rootFolder,
   srcFolder: srcFolder,
-  ftp: ``,
+  ftp: `/www/mashfeii.ru/`,
 };
