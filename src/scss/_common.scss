@@ -1,10 +1,32 @@
 [hidden] {
   display: none;
 }
+
+// NOTE: margins
+.page > section:not(:last-child) {
+  margin-bottom: rem(100);
+}
+
 .main-title {
   font-family: "GothamPro";
   font-weight: 700;
   font-size: rem(64);
   line-height: math.div(69, 64);
   color: var(--clr-accent-primary);
+}
+
+.title {
+  font-family: "GothamPro", sans-serif;
+  font-weight: 700;
+  @include adaptiveValue("font-size", 45, 30);
+  line-height: math.div(43, 45);
+  color: var(--clr-accent-primary);
+}
+
+.inner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+  flex-wrap: wrap;
 }
