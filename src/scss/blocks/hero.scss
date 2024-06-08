@@ -1,5 +1,82 @@
 .hero {
-   &__container {
-      
-   }
+  position: relative;
+  &__container {
+    display: flex;
+    gap: rem(44);
+  }
+  &__content {
+    flex: 0 0 calc(100% - rem(676) - rem(44));
+    margin-top: var(--header-height);
+    padding-top: rem(108);
+    padding-bottom: rem(273);
+    padding-left: rem(18);
+    padding-right: rem(18);
+    background-color: var(--clr-back-primary);
+    border-radius: rem(60);
+  }
+  &__image {
+    // z-index: 30;
+    margin-right: rem(-50);
+    flex: 0 0 rem(726);
+    height: 80vh;
+    min-height: rem(380);
+    border-radius: 0px rem(60);
+    background-image: url("@img/hero/image.jpg");
+  }
+
+  &__title {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: em(30, 64);
+    }
+  }
+  &__additional-title {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: em(50, 64);
+    }
+  }
+  &__description {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: em(72, 24);
+    }
+  }
+  &__content-main {
+    position: relative;
+    padding-top: rem(84);
+    padding-bottom: rem(78);
+    &:not(:last-child) {
+      margin-bottom: rem(281);
+    }
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: rem(222);
+      height: 100%;
+      background: var(--clr-back-secondary);
+      border-radius: 0px rem(60);
+    }
+  }
+  &__cards {
+    margin-left: rem(86);
+    margin-right: rem(86);
+    display: flex;
+    gap: rem(13);
+  }
+  &__card {
+    border-radius: rem(20);
+    padding: rem(12) rem(22);
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
 }

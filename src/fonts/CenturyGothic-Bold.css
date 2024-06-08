@@ -185,3 +185,36 @@
     font-style: normal;
     font-weight: 700;
 }
+@font-face {
+    font-family: "CenturyGothic-Bold";
+    src: url("CenturyGothic-Bold.eot");
+    src: url("CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"),
+         url("CenturyGothic-Bold.woff2") format("woff2"),
+         url("CenturyGothic-Bold.woff") format("woff"),
+         url("CenturyGothic-Bold.ttf") format("ttf"),
+         url("CenturyGothic-Bold.svg#CenturyGothic-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "CenturyGothic-Bold";
+    src: url("CenturyGothic-Bold.eot");
+    src: url("CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"),
+         url("CenturyGothic-Bold.woff2") format("woff2"),
+         url("CenturyGothic-Bold.woff") format("woff"),
+         url("CenturyGothic-Bold.ttf") format("ttf"),
+         url("CenturyGothic-Bold.svg#CenturyGothic-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "CenturyGothic-Bold";
+    src: url("CenturyGothic-Bold.eot");
+    src: url("CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"),
+         url("CenturyGothic-Bold.woff2") format("woff2"),
+         url("CenturyGothic-Bold.woff") format("woff"),
+         url("CenturyGothic-Bold.ttf") format("ttf"),
+         url("CenturyGothic-Bold.svg#CenturyGothic-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
