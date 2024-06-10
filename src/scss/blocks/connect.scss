@@ -1,0 +1,40 @@
+.connect {
+  &__container {
+    position: relative;
+    z-index: 2;
+    padding-top: rem(75);
+    padding-bottom: rem(75);
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 72.25%;
+      border-radius: rem(47);
+      @extend %bg-cov;
+      background-image: url("@img/connect/image.jpg");
+      background-position: 20% center;
+    }
+  }
+  &__body {
+    max-width: rem(639);
+    padding: rem(56) rem(28) rem(50) rem(59);
+    background: var(--clr-accent-secondary);
+    border-radius: rem(5) rem(60);
+  }
+  &__title {
+    color: var(--clr-white);
+    line-height: math.div(54, 45);
+
+    &:not(:last-child) {
+      margin-bottom: em(30, 45);
+    }
+  }
+  &__button {
+    padding-left: rem(58);
+    padding-right: rem(58);
+  }
+}

@@ -2,6 +2,22 @@
   display: none;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  //== 768px ==//
+  @media (max-width: $mb) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.grid--3 {
+  > * {
+    grid-column: span 4;
+  }
+}
+
 // NOTE: margins
 .page > section:not(:last-child) {
   margin-bottom: rem(100);
@@ -18,7 +34,7 @@
 .title {
   font-family: "GothamPro", sans-serif;
   font-weight: 700;
-  @include adaptiveValue("font-size", 45, 30);
+  @include adaptiveValue("font-size", 45, 28);
   line-height: math.div(43, 45);
   color: var(--clr-accent-primary);
 }
@@ -27,6 +43,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: rem(20);
+  column-gap: rem(40);
+  row-gap: rem(20);
   flex-wrap: wrap;
+  &:not(:last-child) {
+    margin-bottom: rem(62);
+  }
+
+  //== 992px ==//
+  @media (max-width: $tb) {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
+.background-element {
+  padding: rem(18) rem(28);
+  border-radius: rem(50);
+  background: var(--clr-back-primary);
+}
+
+.cover {
+  background-color: var(--clr-back-primary);
+  padding-top: rem(42);
+  padding-bottom: rem(42);
 }

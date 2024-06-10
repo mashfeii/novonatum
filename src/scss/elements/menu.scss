@@ -3,18 +3,7 @@
     > ul {
       display: flex;
       align-items: center;
-      padding: rem(12) rem(13);
       gap: rem(21);
-      background: var(--clr-back-primary);
-      border-radius: rem(38);
-    }
-    > ul > li {
-    }
-    > ul > li:hover ul {
-      // transform: translateY(0);
-      // opacity: 1;
-      // visibility: visible;
-      // pointer-events: all;
     }
     > ul > li > a {
       padding: rem(6) rem(12);

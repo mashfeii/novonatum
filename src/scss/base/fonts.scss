@@ -26,3 +26,11 @@
 .f-24-400 {
   @extend %f-24-400;
 }
+%f-18-700 {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 18, 16);
+  line-height: math.div(28, 18);
+}
+.f-18-700 {
+  @extend %f-18-700;
+}

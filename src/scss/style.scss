@@ -72,6 +72,11 @@ body {
   > main {
     flex: 1 1 auto;
   }
+  &__page {
+    &:not(:last-child) {
+      margin-bottom: rem(98);
+    }
+  }
 }
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
@@ -120,6 +125,8 @@ body {
 // Подключение стилей небольших элементов
 @import "elements/logo";
 @import "elements/menu";
+@import "elements/card-products";
+@import "elements/titled-card";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -130,3 +137,6 @@ body {
 @import "blocks/benefits";
 @import "blocks/provided";
 @import "blocks/categories";
+@import "blocks/products";
+@import "blocks/materials";
+@import "blocks/connect";

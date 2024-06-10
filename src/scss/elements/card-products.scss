@@ -1,0 +1,43 @@
+.card-products {
+  &__image {
+    height: rem(193);
+    @extend %fl-a-ct;
+    background-color: var(--back, #f8f9fd);
+    border: 1px solid var(--clr-back-secondary);
+    border-radius: rem(20);
+
+    img {
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-family: "GothamPro", sans-serif;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(28, 18);
+    color: var(--clr-accent-primary);
+
+    &:not(:last-child) {
+      margin-bottom: em(10, 18);
+    }
+  }
+
+  &__description {
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(23, 18);
+
+    &:not(:last-child) {
+      margin-bottom: em(20, 18);
+    }
+  }
+
+  &__button {
+  }
+}

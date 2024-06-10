@@ -2,13 +2,37 @@
 // Снипет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&._fw {
-		width: 100%;
-	}
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: rem(14) rem(34);
+  background-color: var(--clr-accent-secondary);
+  border-radius: rem(5) rem(20);
+
+  font-family: "GothamPro", sans-serif;
+  font-weight: 500;
+  @include adaptiveValue("font-size", 18, 15);
+  line-height: math.div(28, 18);
+  color: var(--clr-white);
+
+  transition:
+    border-radius 0.32s ease,
+    background-color 0.32s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      border-radius: rem(20);
+      background-color: rgba(83, 162, 219, 0.9);
+    }
+  }
+  //== 768px ==//
+  @media(max-width: $mb) {
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+  }
+
+  &.button--white {
+    background-color: var(--clr-white);
+    color: var(--clr-accent-secondary);
+  }
 }

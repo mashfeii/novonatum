@@ -1,0 +1,30 @@
+.materials {
+  &__header {
+  }
+
+  &__header {
+  }
+
+  &__cards {
+    column-gap: rem(56);
+    row-gap: rem(30);
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      column-gap: rem(25);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      > * {
+        grid-column: span 8;
+      }
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      row-gap: rem(35);
+      > * {
+        grid-column: span 6;
+      }
+    }
+  }
+}
