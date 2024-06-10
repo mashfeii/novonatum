@@ -1,4 +1,67 @@
 <footer class="footer">
-	<div class="footer__container">
-	</div>
+  <div class="footer__container container">
+    <div class="footer__row footer__row--main">
+      @@include('../elements/logo.htm', {"subclass":"footer__logo"})
+      @@include('../elements/menu.htm', {"subclass":"footer__menu"})
+    </div>
+    <div class="footer__row footer__row--contacts">
+      <div class="footer__contacts-links">
+        <a href="tel:88002502872" class="footer__contacts-link">
+          <svg width="24" height="24">
+            <use xlink:href="@img/icons/icons.svg#phone" />
+          </svg>
+          <span>8-800-250-28-72</span>
+        </a>
+        <a href="javascript:void(0);" class="footer__contacts-link">
+          <svg width="24" height="24">
+            <use xlink:href="@img/icons/icons.svg#map" />
+          </svg>
+          <span
+            >г. Москва, ул. Ленинская Слобода, дом 19, этаж 6, ком. 11, оф.
+            22</span
+          >
+        </a>
+      </div>
+      <div class="footer__social">
+        <div class="footer__social-links">
+          <a
+            href="javascript:void(0);"
+            class="footer__social-link footer__social-link--vk"
+          >
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="footer__social-link footer__social-link--tg"
+          >
+          </a>
+        </div>
+        <button class="footer__question button">Задать вопрос</button>
+      </div>
+    </div>
+    <div class="footer__row footer__row--info">
+      <div class="footer__info-left">
+        <a href="javascript:void(0);" class="footer__politics">
+          Политика конфиденциальности
+        </a>
+        <span class="footer__copyrights">© Novonatum 2024</span>
+      </div>
+      <a href="javascript:void(0);" class="footer__made">
+        <span>Разработано в агентстве:</span
+        ><img
+          src="@img/icons/developer.svg"
+          alt="Market Go"
+          width="36"
+          height="29"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="footer__description">
+    <div class="container">
+      <span class="footer__consult">
+        БАД, не является лекарством. Перед применением проконсультируйтесь с
+        врачом
+      </span>
+    </div>
+  </div>
 </footer>
