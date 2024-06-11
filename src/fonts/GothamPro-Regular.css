@@ -339,3 +339,25 @@
     font-style: normal;
     font-weight: 300;
 }
+@font-face {
+    font-family: "GothamPro";
+    src: url("GothamPro-Regular.eot");
+    src: url("GothamPro-Regular.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Regular.woff2") format("woff2"),
+         url("GothamPro-Regular.woff") format("woff"),
+         url("GothamPro-Regular.ttf") format("ttf"),
+         url("GothamPro-Regular.svg#GothamPro") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "GothamPro";
+    src: url("GothamPro-Regular.eot");
+    src: url("GothamPro-Regular.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Regular.woff2") format("woff2"),
+         url("GothamPro-Regular.woff") format("woff"),
+         url("GothamPro-Regular.ttf") format("ttf"),
+         url("GothamPro-Regular.svg#GothamPro") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
