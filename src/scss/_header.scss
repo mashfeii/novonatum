@@ -44,6 +44,8 @@
     border-radius: rem(38);
   }
   &__logo {
+    position: relative;
+    z-index: 40;
     .logo__title {
       color: #008c9f;
     }

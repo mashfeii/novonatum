@@ -1,15 +1,30 @@
 .connect {
+  //== 768px ==//
+  @media (max-width: $mb) {
+    &.cover {
+      padding-top: rem(21);
+      padding-bottom: rem(21);
+    }
+  }
   &__container {
     position: relative;
     z-index: 2;
     padding-top: rem(75);
     padding-bottom: rem(75);
 
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-bottom: 0;
+    }
+    @media (max-width: em(479.98)) {
+      padding-top: 0;
+    }
+
     &::after {
       content: "";
       position: absolute;
       z-index: -1;
-      right: 0;
+      right: rem(20);
       top: 0;
       height: 100%;
       width: 72.25%;
@@ -17,6 +32,19 @@
       @extend %bg-cov;
       background-image: url("@img/connect/image.jpg");
       background-position: 20% center;
+
+      //== 1200px ==//
+      @media (max-width: $note-m) {
+        width: 80%;
+      }
+      //== 768px ==//
+      @media (max-width: $mb) {
+        width: calc(100% - rem(40));
+        background-position: left center;
+      }
+      @media (max-width: em(479.98)) {
+        display: none;
+      }
     }
   }
   &__body {
@@ -24,8 +52,20 @@
     padding: rem(56) rem(28) rem(50) rem(59);
     background: var(--clr-accent-secondary);
     border-radius: rem(5) rem(60);
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      max-width: rem(520);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: rem(380);
+      padding: rem(40) rem(30) rem(35);
+      border-radius: rem(5) rem(47);
+    }
   }
   &__title {
+    @include adaptiveValue("font-size", 45, 20);
     color: var(--clr-white);
     line-height: math.div(54, 45);
 

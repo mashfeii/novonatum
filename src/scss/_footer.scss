@@ -4,6 +4,17 @@
   background-color: var(--clr-accent-primary);
   border-radius: rem(60) 0 0 0;
 
+  //== 992px ==//
+  @media (max-width: $tb) {
+    padding-top: rem(30);
+    border-radius: rem(40) 0 0 0;
+  }
+  //== 768px ==//
+  @media (max-width: $mb) {
+    padding-top: rem(25);
+    border-radius: rem(20) 0 0 0;
+  }
+
   &__logo {
     .logo__title {
       color: var(--clr-white);
@@ -17,18 +28,38 @@
     }
   }
 
-  &__menu {
-    .menu__body > ul > li > a {
-      color: var(--clr-white);
+  &__list {
+    gap: rem(4);
+    display: flex;
+    align-items: center;
 
-      @media (any-hover: hover) {
-        &:hover {
-          background-color: rgba(248, 249, 253, 0.3);
-        }
+    @media (max-width: em(489.98)) {
+      flex-wrap: wrap;
+      column-gap: rem(12);
+      row-gap: rem(2);
+    }
+  }
+  &__link {
+    padding: rem(6) rem(12);
+    border-radius: 17px;
+
+    font-size: rem(16);
+    line-height: math.div(30, 16);
+    font-variant: all-small-caps;
+    color: var(--clr-white);
+    transition:
+      background-color 0.32s ease,
+      color 0.32s ease-in-out;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(248, 249, 253, 0.3);
       }
     }
-    .menu__body > ul {
-      gap: rem(4);
+
+    @media (max-width: em(489.98)) {
+      font-size: rem(18);
+      padding: 0;
     }
   }
 
@@ -37,17 +68,61 @@
     align-items: center;
     justify-content: space-between;
     gap: rem(40);
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      flex-direction: column;
+      row-gap: rem(15);
+    }
+    @media (max-width: em(489.98)) {
+      align-items: flex-start;
+    }
   }
   &__row--main:not(:last-child) {
     margin-bottom: rem(7);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(20);
+    }
+    @media (max-width: em(489.98)) {
+      margin-bottom: rem(25);
+    }
   }
   &__row--contacts:not(:last-child) {
     margin-bottom: rem(7);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(20);
+    }
+    @media (max-width: em(489.98)) {
+      margin-bottom: rem(25);
+    }
+  }
+  &__row--info {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    @media (max-width: em(489.98)) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: rem(7);
+    }
   }
 
   &__contacts-links,
   &__social {
     @extend %fl-c;
+  }
+
+  &__social {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      gap: rem(40);
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   &__social-links {
@@ -59,19 +134,39 @@
     svg {
       fill: #40bbf1;
     }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      gap: rem(10);
+      &:not(:last-child) {
+        margin-bottom: rem(0);
+      }
+    }
   }
   &__social-link {
     flex: 0 0 rem(31);
+    width: rem(31);
     height: rem(31);
     @extend %bg-con;
     transition: transform 0.32s ease-in-out;
     &:not(:last-child) {
       margin-right: rem(14);
+
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-right: 0;
+      }
     }
     @media (any-hover: hover) {
       &:hover {
         transform: scale(1.2);
       }
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      flex: 0 0 rem(42);
+      width: rem(42);
+      height: rem(42);
     }
   }
   &__social-link--vk {
@@ -95,20 +190,22 @@
 
     svg {
       fill: var(--clr-white);
+      transition: opacity 0.32s ease-in-out;
     }
-    span {
-      border-bottom: 1px dashed transparent;
-      transition: border-color 0.32s ease-in-out;
-    }
+    transition: opacity 0.32s ease-in-out;
 
     @media (any-hover: hover) {
-      &:hover span {
-        border-color: var(--clr-white);
+      &:hover {
+        opacity: 0.8;
       }
     }
 
     &:not(:last-child) {
       margin-bottom: em(17, 14);
+    }
+
+    @media (max-width: em(489.98)) {
+      line-height: math.div(18, 14);
     }
   }
 
@@ -147,6 +244,7 @@
   }
 
   &__description {
+    text-align: center;
     padding-top: rem(8);
     padding-bottom: rem(8);
     background-color: var(--clr-back-primary);

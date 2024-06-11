@@ -14,3 +14,15 @@
   --clr-add-2: #f2e2d8;
   --clr-add-1: #f0efeb;
 }
+//== 1200px ==//
+@media (max-width: $note-m) {
+  :root {
+    --header-height: 85px;
+  }
+}
+//== 768px ==//
+@media (max-width: $mb) {
+  :root {
+    --header-height: 70px;
+  }
+}

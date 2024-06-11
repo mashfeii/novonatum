@@ -21,12 +21,21 @@
 // NOTE: margins
 .page > section:not(:last-child) {
   margin-bottom: rem(100);
+
+  //== 992px ==//
+  @media (max-width: $tb) {
+    margin-bottom: rem(80);
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    margin-bottom: rem(60);
+  }
 }
 
 .main-title {
-  font-family: "GothamPro";
+  font-family: "GothamPro", sans-serif;
   font-weight: 700;
-  font-size: rem(64);
+  @include adaptiveValue("font-size", 64, 32, $containerWidth, 768, 1);
   line-height: math.div(69, 64);
   color: var(--clr-accent-primary);
 }
