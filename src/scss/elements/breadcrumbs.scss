@@ -1,0 +1,26 @@
+.breadcrumbs {
+  &__list {
+    @extend %fl-r-ct;
+    gap: rem(8);
+  }
+
+  &__item {
+    @extend %fl-r-ct;
+    &:not(:first-child) {
+      &::before {
+        content: "";
+        flex: 0 0 rem(1);
+        width: rem(1);
+        height: rem(14);
+        background-color: var(--clr-accent-primary);
+        margin-right: rem(8);
+      }
+    }
+  }
+
+  &__link {
+    @include adaptiveValue("font-size", 17, 15);
+    line-height: math.div(25, 17);
+    color: var(--clr-accent-primary);
+  }
+}

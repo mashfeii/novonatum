@@ -101,3 +101,7 @@
   pointer-events: none;
   filter: grayscale(0.5);
 }
+
+.page--inner {
+  padding-top: var(--header-height);
+}
