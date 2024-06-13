@@ -1,17 +1,43 @@
 .card-products {
   &__image {
+    position: relative;
+    overflow: hidden;
     height: rem(193);
     @extend %fl-a-ct;
-    background-color: var(--back, #f8f9fd);
     border: 1px solid var(--clr-back-secondary);
     border-radius: rem(20);
+    padding: rem(24) rem(40);
 
     img {
+      max-width: rem(123);
+      object-fit: contain;
     }
 
     &:not(:last-child) {
       margin-bottom: rem(24);
+
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        margin-bottom: rem(14);
+      }
     }
+  }
+  &__labels {
+    position: absolute;
+    top: rem(12);
+    right: rem(12);
+    @extend %fl-c;
+    align-items: flex-end;
+    gap: rem(4);
+  }
+  &__label {
+    @include adaptiveValue("font-size", 14, 12);
+    line-height: math.div(21, 14);
+    color: var(--clr-white);
+
+    padding: rem(1) rem(8);
+    background-color: var(--back, #22567b);
+    border-radius: rem(18);
   }
 
   &__content {
@@ -26,6 +52,10 @@
 
     &:not(:last-child) {
       margin-bottom: em(10, 18);
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        margin-bottom: rem(4);
+      }
     }
   }
 
@@ -39,5 +69,9 @@
   }
 
   &__button {
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      width: 100%;
+    }
   }
 }
