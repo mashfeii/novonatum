@@ -8,7 +8,13 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from "swiper";
-import { Navigation, Pagination, Controller } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Controller,
+  Thumbs,
+  EffectFade,
+} from "swiper/modules";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -23,6 +29,7 @@ EffectFade, Lazy, Manipulation
 // import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
 import "swiper/scss";
+import "swiper/scss/effect-fade";
 
 // Инициализация слайдеров
 function initSliders() {
@@ -57,6 +64,37 @@ function initSliders() {
     });
     textSlider.controller.control = authorSlider;
     authorSlider.controller.control = textSlider;
+  }
+
+  if (document.querySelector(".overview__slider-thumbs")) {
+    const thumbsSlider = new Swiper(".overview__slider-thumbs", {
+      modules: [Thumbs],
+      observer: true,
+      observeParents: true,
+      direction: "vertical",
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 22,
+      speed: 800,
+    });
+    const mainSlider = new Swiper(".overview__slider-main", {
+      modules: [Navigation, Thumbs, EffectFade],
+      observer: true,
+      observeParents: true,
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 600,
+      effect: "fade",
+      navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      },
+      thumbs: {
+        swiper: thumbsSlider,
+        multipleActiveThumbs: false,
+      },
+    });
   }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
