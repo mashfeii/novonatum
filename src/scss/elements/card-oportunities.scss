@@ -1,0 +1,32 @@
+.card-oportunities {
+  &__image {
+    height: rem(250);
+    border-radius: rem(5) rem(60);
+    @extend %bg-cov;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      height: rem(200);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+  &__title {
+    font-family: "GothamPro";
+    color: var(--clr-accent-primary);
+
+    &:not(:last-child) {
+      margin-bottom: em(6, 18);
+    }
+  }
+  &__description {
+  }
+}

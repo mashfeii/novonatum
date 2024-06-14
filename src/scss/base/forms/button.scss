@@ -26,7 +26,7 @@
     }
   }
   //== 768px ==//
-  @media(max-width: $mb) {
+  @media (max-width: $mb) {
     padding-top: rem(10);
     padding-bottom: rem(10);
   }
@@ -34,5 +34,8 @@
   &.button--white {
     background-color: var(--clr-white);
     color: var(--clr-accent-secondary);
+  }
+  &.button--extended {
+    padding: rem(14) rem(75);
   }
 }

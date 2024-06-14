@@ -4,6 +4,12 @@
     max-width: rem(890);
     margin: 0 auto;
     text-align: center;
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      text-align: left;
+      margin-left: 0;
+    }
   }
   &__title {
     &:not(:last-child) {

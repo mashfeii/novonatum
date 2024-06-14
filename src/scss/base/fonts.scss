@@ -8,7 +8,7 @@
   @extend %f-15-400;
 }
 %f-18-400 {
-  @include adaptiveValue("font-size", 18, 15);
+  @include adaptiveValue("font-size", 18, 16);
   line-height: math.div(23, 18);
 }
 .f-18-400 {
@@ -16,7 +16,7 @@
 }
 %f-18-700 {
   font-weight: 700;
-  @include adaptiveValue("font-size", 18, 15);
+  @include adaptiveValue("font-size", 18, 16);
   line-height: math.div(28, 18);
 }
 .f-18-700 {
