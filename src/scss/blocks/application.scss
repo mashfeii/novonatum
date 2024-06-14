@@ -1,0 +1,75 @@
+.application {
+  &__body {
+    display: flex;
+    column-gap: rem(50);
+  }
+
+  &__content {
+    padding: rem(52) rem(60) rem(28) rem(40);
+    background-color: var(--clr-back-primary);
+    border-radius: rem(20);
+  }
+  &__subtitle {
+    color: var(--clr-accent-primary);
+    &:not(:last-child) {
+      margin-bottom: em(6, 18);
+    }
+  }
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: em(48, 18);
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    display: flex;
+    gap: rem(20);
+    flex: 0 0 rem(620);
+    padding: rem(9) rem(27) rem(24) rem(50);
+
+    background: var(--clr-back-secondary);
+    border-radius: rem(5) rem(60);
+  }
+  &__image-content {
+    @extend %fl-r-ct;
+
+    span {
+      max-width: rem(270);
+      position: relative;
+      z-index: 2;
+      padding-left: rem(52);
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        height: 160%;
+        width: 300%;
+        left: 0;
+        top: -30%;
+
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: rem(5) 0 rem(5) rem(60);
+      }
+
+      font-family: "GothamPro";
+      font-weight: 700;
+      @include adaptiveValue("font-size", 22, 18);
+      line-height: math.div(30, 22);
+      text-align: right;
+      color: var(--clr-accent-primary);
+    }
+  }
+  &__img {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 rem(257);
+    height: rem(300);
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+}

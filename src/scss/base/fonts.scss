@@ -22,6 +22,13 @@
 .f-18-700 {
   @extend %f-18-700;
 }
+%f-20-400 {
+  @include adaptiveValue("font-size", 20, 16);
+  line-height: math.div(32, 20);
+}
+.f-20-400 {
+  @extend %f-20-400;
+}
 %f-22-700 {
   font-family: "GothamPro", sans-serif;
   font-weight: 700;

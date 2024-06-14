@@ -46,6 +46,10 @@
   @include adaptiveValue("font-size", 45, 28);
   line-height: math.div(43, 45);
   color: var(--clr-accent-primary);
+
+  &:not(:last-child) {
+    margin-bottom: em(11, 45);
+  }
 }
 
 .subtitle {
@@ -90,6 +94,12 @@
   background-color: var(--clr-back-primary);
   padding-top: rem(42);
   padding-bottom: rem(42);
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding-top: rem(25);
+    padding-bottom: rem(20);
+  }
 }
 
 .accent-secondary {
@@ -135,6 +145,43 @@
     @media (max-width: $mb-m) {
       width: rem(12);
       height: rem(10);
+    }
+  }
+}
+.description {
+  &:not(:last-child) {
+    margin-bottom: em(64, 24);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: rem(45);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(30);
+    }
+  }
+}
+.block-header {
+  .title,
+  .description {
+    max-width: rem(890);
+    margin: 0 auto;
+    text-align: center;
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      text-align: left;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: em(64, 24);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: rem(45);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(30);
     }
   }
 }

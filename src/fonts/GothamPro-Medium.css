@@ -471,3 +471,36 @@
     font-style: normal;
     font-weight: 300;
 }
+@font-face {
+    font-family: "GothamPro-Medium";
+    src: url("GothamPro-Medium.eot");
+    src: url("GothamPro-Medium.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Medium.woff2") format("woff2"),
+         url("GothamPro-Medium.woff") format("woff"),
+         url("GothamPro-Medium.ttf") format("ttf"),
+         url("GothamPro-Medium.svg#GothamPro-Medium") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "GothamPro-Medium";
+    src: url("GothamPro-Medium.eot");
+    src: url("GothamPro-Medium.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Medium.woff2") format("woff2"),
+         url("GothamPro-Medium.woff") format("woff"),
+         url("GothamPro-Medium.ttf") format("ttf"),
+         url("GothamPro-Medium.svg#GothamPro-Medium") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "GothamPro-Medium";
+    src: url("GothamPro-Medium.eot");
+    src: url("GothamPro-Medium.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Medium.woff2") format("woff2"),
+         url("GothamPro-Medium.woff") format("woff"),
+         url("GothamPro-Medium.ttf") format("ttf"),
+         url("GothamPro-Medium.svg#GothamPro-Medium") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

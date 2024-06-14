@@ -471,3 +471,36 @@
     font-style: normal;
     font-weight: 300;
 }
+@font-face {
+    font-family: "GothamPro-Black";
+    src: url("GothamPro-Black.eot");
+    src: url("GothamPro-Black.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Black.woff2") format("woff2"),
+         url("GothamPro-Black.woff") format("woff"),
+         url("GothamPro-Black.ttf") format("ttf"),
+         url("GothamPro-Black.svg#GothamPro-Black") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "GothamPro-Black";
+    src: url("GothamPro-Black.eot");
+    src: url("GothamPro-Black.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Black.woff2") format("woff2"),
+         url("GothamPro-Black.woff") format("woff"),
+         url("GothamPro-Black.ttf") format("ttf"),
+         url("GothamPro-Black.svg#GothamPro-Black") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "GothamPro-Black";
+    src: url("GothamPro-Black.eot");
+    src: url("GothamPro-Black.eot?#iefix") format("embedded-opentype"),
+         url("GothamPro-Black.woff2") format("woff2"),
+         url("GothamPro-Black.woff") format("woff"),
+         url("GothamPro-Black.ttf") format("ttf"),
+         url("GothamPro-Black.svg#GothamPro-Black") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
