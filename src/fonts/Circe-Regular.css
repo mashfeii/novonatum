@@ -438,3 +438,36 @@
     font-style: normal;
     font-weight: 300;
 }
+@font-face {
+    font-family: "Circe-Regular";
+    src: url("Circe-Regular.eot");
+    src: url("Circe-Regular.eot?#iefix") format("embedded-opentype"),
+         url("Circe-Regular.woff2") format("woff2"),
+         url("Circe-Regular.woff") format("woff"),
+         url("Circe-Regular.ttf") format("ttf"),
+         url("Circe-Regular.svg#Circe-Regular") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Circe-Regular";
+    src: url("Circe-Regular.eot");
+    src: url("Circe-Regular.eot?#iefix") format("embedded-opentype"),
+         url("Circe-Regular.woff2") format("woff2"),
+         url("Circe-Regular.woff") format("woff"),
+         url("Circe-Regular.ttf") format("ttf"),
+         url("Circe-Regular.svg#Circe-Regular") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Circe-Regular";
+    src: url("Circe-Regular.eot");
+    src: url("Circe-Regular.eot?#iefix") format("embedded-opentype"),
+         url("Circe-Regular.woff2") format("woff2"),
+         url("Circe-Regular.woff") format("woff"),
+         url("Circe-Regular.ttf") format("ttf"),
+         url("Circe-Regular.svg#Circe-Regular") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

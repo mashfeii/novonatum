@@ -136,6 +136,7 @@ body {
 @import "elements/card-products";
 @import "elements/titled-card";
 @import "elements/breadcrumbs";
+@import "elements/horizontal";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -153,3 +154,4 @@ body {
 @import "blocks/filters";
 @import "blocks/preview";
 @import "blocks/overview";
+@import "blocks/horizontal-text";

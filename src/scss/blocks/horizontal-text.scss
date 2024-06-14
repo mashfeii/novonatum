@@ -1,0 +1,20 @@
+.horizontal-text {
+  &__title,
+  &__description {
+    max-width: rem(890);
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(11, 45);
+    }
+  }
+
+  &__description {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: em(86, 24);
+    }
+  }
+}
