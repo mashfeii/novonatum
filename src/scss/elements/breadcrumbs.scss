@@ -8,7 +8,7 @@
 .breadcrumbs {
   &__list {
     @extend %fl-r-ct;
-    gap: rem(8);
+    gap: rem(4);
   }
 
   &__item {
@@ -20,7 +20,18 @@
         width: rem(1);
         height: rem(14);
         background-color: var(--clr-accent-primary);
-        margin-right: rem(8);
+        margin-right: rem(4);
+      }
+    }
+
+    a.breadcrumbs__link {
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.32s ease-in-out;
+
+      @media (any-hover: hover) {
+        &:hover {
+          border-color: inherit;
+        }
       }
     }
   }
@@ -29,5 +40,6 @@
     @include adaptiveValue("font-size", 17, 15);
     line-height: math.div(25, 17);
     color: var(--clr-accent-primary);
+    padding: 0 rem(4);
   }
 }

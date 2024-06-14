@@ -1,0 +1,99 @@
+.overview {
+  &__container {
+    display: flex;
+  }
+  &__sliders {
+    display: flex;
+    align-items: flex-start;
+    flex: 0 0 rem(645);
+    min-width: 0;
+  }
+  &__slider-thumbs {
+    flex: 0 0 rem(96);
+    height: rem(450);
+    min-width: 0;
+  }
+  &__slider-cover {
+    position: relative;
+    flex: 0 0 rem(540);
+    padding: 0 rem(45);
+    min-width: 0;
+  }
+  &__slide-main {
+    position: relative;
+    @extend %fl-r-ct;
+    height: rem(450);
+    border-radius: rem(20);
+    background-color: var(--clr-add-3);
+    padding: rem(46) rem(60) rem(28) rem(67);
+
+    img {
+      width: 100%;
+      height: rem(377);
+      object-fit: contain;
+    }
+
+    .swiper-lazy-preloader {
+      z-index: 5;
+    }
+  }
+  &__slide {
+    cursor: pointer;
+    @extend %fl-r-ct;
+    border-radius: rem(5);
+    background-color: var(--clr-add-3);
+    border: 1px solid var(--clr-back-secondary);
+    padding: rem(20) rem(24);
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+      transition: transform 0.32s ease-in-out;
+    }
+
+    &.swiper-slide-thumb-active {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__navigation {
+    @extend %fl-r-ctb;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: rem(25);
+    width: calc(100% - rem(50));
+    transform: translateY(-50%);
+  }
+
+  &__content {
+    padding: rem(52) rem(40) rem(40);
+    background-color: var(--clr-back-primary);
+    border-radius: 0px rem(60);
+  }
+  &__content-block {
+    &:not(:last-child) {
+      margin-bottom: em(27, 18);
+    }
+  }
+  &__title {
+    font-family: "GothamPro";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 18, 15);
+    line-height: math.div(28, 18);
+    color: var(--clr-accent-primary);
+
+    &:not(:last-child) {
+      margin-bottom: em(6, 18);
+    }
+  }
+  &__description {
+    @include adaptiveValue("font-size", 18, 15);
+    line-height: math.div(23, 18);
+  }
+  &__button {
+    padding: rem(14) rem(75);
+    margin-top: rem(27);
+  }
+}

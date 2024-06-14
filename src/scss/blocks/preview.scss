@@ -1,0 +1,112 @@
+.preview {
+  &__container {
+    display: flex;
+    max-width: rem(1440);
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 rem(20);
+  }
+
+  &__content {
+    overflow: hidden;
+    padding: rem(30) rem(101) rem(44) rem(48);
+    background: #f8f9fd;
+    border-radius: 0px 0px 0px rem(60);
+  }
+  &__logo {
+    img {
+      height: rem(52);
+      object-fit: contain;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+  &__title {
+    line-height: math.div(51, 45);
+    color: var(--clr-accent-secondary);
+    &:not(:last-child) {
+      margin-bottom: em(2, 45);
+    }
+  }
+  &__subtitle {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 26, 18);
+    line-height: math.div(40, 26);
+    color: var(--clr-accent-primary);
+
+    &:not(:last-child) {
+      margin-bottom: em(27, 26);
+    }
+  }
+  &__image-row {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: rem(20);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: rem(-48);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 109%;
+      height: 80%;
+      background: var(--clr-back-secondary);
+      border-radius: 0px rem(60) rem(5) 0px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(36);
+    }
+  }
+  &__image-item {
+    flex: 1 1 0;
+    img {
+      height: rem(260);
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .preview__image-row--multiple & img {
+      height: rem(207);
+    }
+  }
+
+  &__image-block {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: rem(708);
+    display: flex;
+    flex-direction: column;
+  }
+  &__image {
+    flex: 1 1 auto;
+    @extend %bg-cov;
+    border-radius: 0 rem(60) 0 0;
+  }
+  &__benefits {
+    @extend %fl-r-ct;
+    gap: rem(51);
+    padding: rem(32) rem(63) rem(40) rem(74);
+    background-color: var(--clr-accent-primary);
+    border-radius: 0 0 rem(6) 0;
+  }
+  &__benefits-icon {
+    @extend %bg-con;
+    flex: 0 0 rem(37);
+    width: rem(37);
+    height: rem(37);
+    fill: var(--clr-white);
+  }
+  &__benefits-item {
+    @extend %fl-r-ct;
+    gap: rem(10);
+
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(22, 16);
+    color: var(--clr-back-primary);
+  }
+}

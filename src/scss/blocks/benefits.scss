@@ -1,6 +1,18 @@
 .benefits {
   &__container {
   }
+  &__header {
+    .benefits__title,
+    .benefits__description {
+      text-align: left;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(64);
+    }
+  }
+  &__button {
+    padding: rem(14) rem(75);
+  }
   &__title {
     text-align: center;
 
@@ -26,6 +38,62 @@
     }
   }
 
+  &__cards-addition {
+    display: flex;
+    align-items: center;
+    gap: rem(100);
+
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      gap: rem(60);
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      > .benefits__card {
+        display: none;
+      }
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex-direction: column;
+      row-gap: rem(40);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      row-gap: rem(20);
+    }
+  }
+  &__cards-block {
+    display: flex;
+    gap: rem(85);
+    background: var(--clr-back-primary);
+    border-radius: rem(5) rem(60);
+    padding: rem(85) rem(35) rem(60);
+
+    .benefits__card {
+      position: relative;
+      z-index: 2;
+    }
+
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      padding: rem(65) rem(20) rem(40);
+      gap: rem(45);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      width: 100%;
+      justify-content: space-between;
+      padding: rem(75) rem(40) rem(30);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      flex-direction: column;
+      row-gap: rem(75);
+      padding: rem(75) rem(20) rem(20);
+      border-radius: rem(5) rem(30);
+    }
+  }
   &__cards {
     position: relative;
     display: grid;
@@ -33,6 +101,39 @@
     column-gap: rem(47);
     row-gap: rem(65);
     padding-top: rem(85);
+
+    &.benefits__cards--inner {
+      &:not(:last-child) {
+        margin-bottom: rem(35);
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        &:not(:last-child) {
+          margin-bottom: rem(45);
+        }
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        &:not(:last-child) {
+          margin-bottom: rem(20);
+        }
+      }
+      //== 1360px ==//
+      @media (min-width: $note-l) {
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: rem(65);
+      }
+      //== 1360px ==//
+      @media (max-width: $note-l) and (min-width: $tb) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: rem(105);
+        max-width: rem(805);
+        margin: 0 auto;
+        &::before {
+          display: none;
+        }
+      }
+    }
 
     &::before {
       content: "";

@@ -11,13 +11,10 @@
   //== 992px ==//
   @media (max-width: $tb) {
     grid-template-columns: rem(42) 1fr;
-    column-gap: rem(4);
+    column-gap: rem(10);
   }
 
-  &__icon {
-    max-width: 100%;
-    object-fit: contain;
-
+  &__image {
     &:not(:last-child) {
       margin-right: rem(11);
     }
@@ -33,6 +30,11 @@
     @media (max-width: $tb) {
       grid-row: 1;
     }
+  }
+
+  &__icon {
+    max-width: 100%;
+    object-fit: contain;
   }
   &__title {
     position: relative;

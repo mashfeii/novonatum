@@ -8,9 +8,9 @@
 *:after {
   box-sizing: border-box;
 }
-a:focus,
-button:focus,
-input:focus {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
   outline-style: dashed;
   outline-color: var(--clr-accent-secondary);
   border-radius: rem(8);
