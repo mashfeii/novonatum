@@ -14,6 +14,9 @@ export const gitignore = () => {
     fs.appendFile("./.gitignore", "**/*.zip\r\n", cb);
     fs.appendFile("./.gitignore", "**/*.rar\r\n", cb);
     fs.appendFile("./.gitignore", "**/*.php\r\n", cb);
+    fs.appendFile("./.gitignore", "src/fonts/*.eot\r\n", cb);
+    fs.appendFile("./.gitignore", "src/fonts/*.css\r\n", cb);
+    fs.appendFile("./.gitignore", "src/fonts/*.svg\r\n", cb);
   }
   return app.gulp.src(`${app.path.srcFolder}`);
 };
