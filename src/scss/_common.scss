@@ -165,7 +165,8 @@
   .title,
   .description {
     max-width: rem(890);
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 
     //== 576px ==//

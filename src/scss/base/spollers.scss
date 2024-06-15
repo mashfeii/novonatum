@@ -1,53 +1,67 @@
 // Блок со спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
-}
-// Спойлер
-.spollers__item {
-	font-size: rem(20);
+  display: grid;
+  gap: rem(15);
 }
 // Заголовок спойлера
 .spollers__title {
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
-	position: relative;
-	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
-	}
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  padding: rem(27) rem(55) rem(23) rem(31);
+  border-radius: rem(20);
+  position: relative;
+
+  font-family: "GothamPro";
+  @extend %f-18-700;
+  color: var(--clr-accent-primary);
+
+  ._spoller-init & {
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: rem(20);
+      top: 50%;
+      background-color: var(--clr-accent-secondary);
+      height: rem(2);
+      width: rem(14);
+      border-radius: rem(5);
+      transition: transform 0.5s ease 0s;
+    }
+    &::before {
+      transform: translate(-62%, -50%) rotate(45deg);
+    }
+    &::after {
+      transform: translate(0, -50%) rotate(-45deg);
+    }
+    &._spoller-active {
+      &::before {
+        transform: translateX(-62%) rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding: rem(20) rem(45) rem(20) rem(20);
+  }
 }
 // Контент спойлера
 .spollers__body {
-	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+  @extend %f-18-400;
+  padding: 0 rem(55) rem(28) rem(31);
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding: 0 rem(45) rem(20) rem(20);
+  }
+}
+.spollers__item {
+  border-radius: rem(20);
+  background-color: var(--clr-back-primary);
 }
