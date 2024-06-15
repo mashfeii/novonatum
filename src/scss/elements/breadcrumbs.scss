@@ -8,19 +8,20 @@
 .breadcrumbs {
   &__list {
     @extend %fl-r-ct;
+    flex-wrap: wrap;
     gap: rem(4);
   }
 
   &__item {
     @extend %fl-r-ct;
-    &:not(:first-child) {
-      &::before {
+    &:not(:last-child) {
+      &::after {
         content: "";
         flex: 0 0 rem(1);
         width: rem(1);
         height: rem(14);
         background-color: var(--clr-accent-primary);
-        margin-right: rem(4);
+        margin-left: rem(4);
       }
     }
 

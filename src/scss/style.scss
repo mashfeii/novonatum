@@ -138,6 +138,8 @@ body {
 @import "elements/breadcrumbs";
 @import "elements/horizontal";
 @import "elements/card-oportunities";
+@import "elements/card";
+@import "elements/article";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -163,3 +165,4 @@ body {
 @import "blocks/product-benefits";
 @import "blocks/video";
 @import "blocks/dosage";
+@import "blocks/articles-grid";

@@ -2,6 +2,25 @@
   display: none;
 }
 
+.page__title {
+  &:not(:last-child) {
+    margin-bottom: rem(68);
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      margin-bottom: rem(50);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: rem(35);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -18,8 +37,15 @@
   }
 }
 
+.grid--4 {
+  > * {
+    grid-column: span 3;
+  }
+}
+
 // NOTE: margins
-.page > section:not(:last-child) {
+.page > section:not(:last-child),
+.page > article:not(:last-child) {
   margin-bottom: rem(100);
 
   //== 992px ==//
