@@ -157,7 +157,7 @@ import "./files/sliders.js";
 // Ленивая (отложенная) загрузка картинок
 // Документация по работе в шаблоне: В HTML добавляем img, video, audio, iframe но вместо src пишем data-src
 // Документация плагина: https://github.com/verlok/vanilla-lazyload
-// import './files/scroll/lazyload.js';
+import './files/scroll/lazyload.js';
 
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js

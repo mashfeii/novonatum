@@ -76,6 +76,17 @@ function initSliders() {
       slidesPerView: 4,
       spaceBetween: 22,
       speed: 800,
+      breakpoints: {
+        320: {
+          spaceBetween: 5,
+        },
+        439.98: {
+          spaceBetween: 10,
+        },
+        709.98: {
+          spaceBetween: 22,
+        },
+      },
     });
     const mainSlider = new Swiper(".overview__slider-main", {
       modules: [Navigation, Thumbs, EffectFade],
