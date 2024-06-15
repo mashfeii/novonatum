@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: rem(10);
   padding: rem(14) rem(34);
   background-color: var(--clr-accent-secondary);
   border-radius: rem(5) rem(20);
@@ -29,6 +30,14 @@
   @media (max-width: $mb) {
     padding-top: rem(10);
     padding-bottom: rem(10);
+  }
+
+  svg {
+    flex: 0 0 rem(22);
+    width: rem(22);
+    height: rem(22);
+    fill: var(--clr-white);
+    object-fit: contain;
   }
 
   &.button--white {

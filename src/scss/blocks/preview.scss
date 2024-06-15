@@ -5,6 +5,15 @@
     box-sizing: content-box;
     margin: 0 auto;
     padding: 0 rem(20);
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex-direction: column;
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding: 0;
+    }
   }
 
   &__content {
@@ -12,6 +21,23 @@
     padding: rem(30) rem(101) rem(44) rem(48);
     background: #f8f9fd;
     border-radius: 0px 0px 0px rem(60);
+
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      padding-right: rem(60);
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      padding: rem(30) rem(40) rem(40) rem(30);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      border-radius: 0 rem(60) 0 0;
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding: rem(25) rem(20) rem(30);
+    }
   }
   &__logo {
     img {
@@ -60,6 +86,11 @@
 
     &:not(:last-child) {
       margin-bottom: rem(36);
+
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        margin-bottom: rem(15);
+      }
     }
   }
   &__image-item {
@@ -81,11 +112,29 @@
     flex-basis: rem(708);
     display: flex;
     flex-direction: column;
+
+    img {
+      object-fit: cover;
+    }
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      flex-basis: rem(580);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex-basis: rem(360);
+    }
   }
   &__image {
     flex: 1 1 auto;
     @extend %bg-cov;
     border-radius: 0 rem(60) 0 0;
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      border-radius: 0;
+    }
   }
   &__benefits {
     @extend %fl-r-ct;
@@ -93,6 +142,26 @@
     padding: rem(32) rem(63) rem(40) rem(74);
     background-color: var(--clr-accent-primary);
     border-radius: 0 0 rem(6) 0;
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      padding: rem(30) rem(20);
+      gap: rem(30);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      justify-content: center;
+      border-radius: 0 0 rem(30) rem(30);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex-wrap: wrap;
+      row-gap: rem(15);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      border-radius: 0 0 0 rem(40);
+    }
   }
   &__benefits-icon {
     @extend %bg-con;
