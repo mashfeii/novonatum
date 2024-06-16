@@ -1,0 +1,20 @@
+.partner-link {
+  @extend %fl-a-ct;
+  padding: rem(20) rem(23);
+  background-color: var(--back, #fff);
+  border-radius: rem(20);
+  border: 2px dashed transparent;
+  transition: border-color 0.32s ease-in-out;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: var(--clr-accent-secondary);
+    }
+  }
+}

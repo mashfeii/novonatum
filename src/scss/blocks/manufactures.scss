@@ -1,0 +1,76 @@
+.manufactures {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(23, 45);
+    }
+  }
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: em(49, 18);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+  }
+
+  &__body {
+    gap: rem(35);
+    //== 1024px ==//
+    @media (max-width: $note-s) {
+      gap: rem(15);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      margin-left: rem(-20);
+      margin-right: rem(-20);
+    }
+  }
+  &__card {
+    padding: rem(48) rem(58) rem(50) rem(57);
+    background-color: var(--clr-back-primary);
+    border-radius: rem(60);
+
+    //== 1024px ==//
+    @media (max-width: $note-s) {
+      padding: rem(35) rem(40) rem(40);
+      border-radius: rem(40);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      padding: rem(30) rem(25) rem(35);
+    }
+  }
+  &__card-logo {
+    width: rem(170);
+    height: rem(120);
+
+    &:not(:last-child) {
+      margin-bottom: rem(13);
+    }
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      width: rem(140);
+      height: rem(95);
+    }
+  }
+  &__card-logo img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  &__card-title {
+    font-family: "GothamPro";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 22);
+    line-height: math.div(48, 36);
+    color: var(--clr-accent-primary);
+
+    &:not(:last-child) {
+      margin-bottom: em(13, 36);
+    }
+  }
+}

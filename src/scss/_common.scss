@@ -43,6 +43,12 @@
   }
 }
 
+.grid--2 {
+  > * {
+    grid-column: span 6;
+  }
+}
+
 // NOTE: margins
 .page > section:not(:last-child),
 .page > article:not(:last-child) {
