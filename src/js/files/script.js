@@ -6,8 +6,13 @@
 document.addEventListener("DOMContentLoaded", function (e) {
   const fileInputs = document.querySelectorAll('input[type="file"]');
   if (fileInputs.length) {
-    fileInputs.foeEach(input, (e) => {
-      console.log(input);
+    fileInputs.forEach((input) => {
+      input.addEventListener("change", function (e) {
+        const fileName = e.target.files[0].name;
+        e.target
+          .closest("label")
+          .querySelector(".form__file-text").textContent = fileName;
+      });
     });
   }
 });
