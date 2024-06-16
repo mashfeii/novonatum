@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/general/_head.htm',{ "title":"Контакты" })
+  <body>
+    <div class="wrapper">
+      <header class="header" data-scroll-show="true">
+        <div class="header__wrapper">
+          <div class="header__container container">
+            @@include('html/elements/logo.htm', {"subclass":"header__logo"})
+            <div class="header__menu menu">
+              <button type="button" class="menu__icon icon-menu">
+                <span></span>
+              </button>
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="catalog.html" class="menu__link">Каталог</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="javascript:void(0);" class="menu__link">О нас</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="javascript:void(0);" class="menu__link">Статьи</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="javascript:void(0);" class="menu__link"
+                      >Где купить</a
+                    >
+                  </li>
+                  <li class="menu__item active">
+                    <span class="menu__link">Контакты</span>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper__page page page--inner">
+        <div class="page__breadcrumbs breadcrumbs container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">Контакты</span>
+            </li>
+          </ul>
+        </div>
+        <div class="page__title container">
+          <h1 class="title">Контакты</h1>
+        </div>
+        <section class="page__contacts contacts">
+          <div class="contacts__container">
+            <div class="contacts__content">
+              <h2 class="contacts__title">
+                Общество с ограниченной ответственностью «НОВО&nbsp;НАТУМ»
+              </h2>
+              <div class="contacts__item">
+                <span class="contacts__item-text">
+                  <svg>
+                    <use xlink:href="@img/icons/icons.svg#phone" />
+                  </svg>
+                  <span>Телефон</span>
+                </span>
+                <a href="tel:+78002502872" class="contacts__item-link">
+                  8-800-250 2872 (бесплатный звонок)
+                </a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-text">
+                  <svg>
+                    <use xlink:href="@img/icons/icons.svg#location" />
+                  </svg>
+                  <span>Юридический адрес</span>
+                </span>
+                <a
+                  href="https://yandex.ru/maps/-/CDrxVK1l"
+                  target="_blank"
+                  class="contacts__item-link"
+                >
+                  115280, Российская Федерация, г. Москва, ул. Ленинская
+                  Слобода, дом 19, этаж 6, комн. 11, офис 22
+                </a>
+              </div>
+            </div>
+            <div
+              class="contacts__map"
+              style="position: relative; overflow: hidden"
+            >
+              <a
+                href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+                style="
+                  color: #eee;
+                  font-size: 12px;
+                  position: absolute;
+                  top: 0px;
+                "
+              >
+                Москва
+              </a>
+              <a
+                href="https://yandex.ru/maps/213/moscow/house/ulitsa_leninskaya_sloboda_19/Z04YcAJiQUcFQFtvfXtxeX9jZw==/?indoorLevel=1&ll=37.652994%2C55.707588&utm_medium=mapframe&utm_source=maps&z=17"
+                style="
+                  color: #eee;
+                  font-size: 12px;
+                  position: absolute;
+                  top: 14px;
+                "
+                >Улица Ленинская Слобода, 19 на карте Москвы, ближайшее метро
+                Автозаводская — Яндекс Карты</a
+              >
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.652994%2C55.707588&mode=whatshere&whatshere%5Bpoint%5D=37.652822%2C55.708303&whatshere%5Bzoom%5D=17&z=17"
+                frameborder="1"
+                allowfullscreen="true"
+                style="position: relative"
+              >
+              </iframe>
+            </div>
+          </div>
+        </section>
+        @@include('html/blocks/contact.htm',{})
+      </main>
+      @@include('html/general/_footer.htm',{})
+    </div>
+    @@include('html/general/_popup.htm',{}) @@include('html/general/_js.htm',{})
+  </body>
+</html>

@@ -1,17 +1,52 @@
 //<FORM>
 // Снипет (HTML):
 .form {
+  @extend %fl-c;
+  gap: rem(24);
+
   &__row {
+    display: flex;
+    gap: rem(14);
   }
-  &__column {
+  &__item {
+    flex: 1 1 auto;
   }
-  &__line {
+  &__file {
+    @extend %fl-r-ct;
+    gap: rem(14);
   }
-  &__input {
+  &__file input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
   }
-  &__button {
+  &__file-button {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(14);
+    padding: rem(14) rem(32) rem(14) rem(19);
+    background-color: var(--clr-accent-primary);
+    border-radius: rem(5) rem(20);
+
+    font-family: "CenturyGothic";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 15, 14);
+    line-height: math.div(18, 15);
+    color: var(--clr-white);
+    svg {
+      flex: 0 0 rem(18);
+      width: rem(18);
+      height: rem(20);
+      fill: var(--clr-white);
+    }
   }
-  &__error {
+  &__file-text {
+    max-width: rem(253);
+    @include adaptiveValue("font-size", 14, 12);
+    line-height: math.div(21, 14);
   }
 }
 //</FORM>
@@ -22,7 +57,7 @@
 
 // <INPUTS>
 // Снипет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Снипет (HTML): chk

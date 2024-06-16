@@ -1,0 +1,87 @@
+<section class="page__contact contact">
+  <div class="contact__container container">
+    <div
+      class="contact__image"
+      style="background-image: url(&quot;@img/contact/image.jpg&quot;)"
+    ></div>
+    <div class="contact__content">
+      <h2 class="contact__title title">Связаться с нами</h2>
+      <p class="contact__description f-18-400">
+        Отправьте сообщение и мы свяжемся с вами в самое ближайшее время
+      </p>
+      <form class="contact__form form">
+        <div class="form__row">
+          <div class="form__item">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ваше имя"
+              required
+              class="form__input input"
+            />
+          </div>
+          <div class="form__item">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ваш e-mail"
+              required
+              class="form__input input"
+            />
+          </div>
+        </div>
+        <div class="form__item">
+          <textarea
+            type="text"
+            name="message"
+            id="message"
+            class="form__input input input--extended"
+          >
+Ваше сообщение</textarea
+          >
+        </div>
+        <label class="form__file">
+          <input
+            type="file"
+            name="file"
+            id="file"
+            accept=".jpg,.jpeg,.png,.heic,.pdf,.docx,.txt"
+          />
+          <span class="form__file-button">
+            <svg>
+              <use xlink:href="@img/icons/icons.svg#file" />
+            </svg>
+            <span>Прикрепить файл</span>
+          </span>
+          <span class="form__file-text"
+            >форматы файлов: jpg, png, heic, pdf, txt, docx; вес файла до
+            10МБ</span
+          >
+        </label>
+        <div class="form__politics">
+          <div class="checkbox">
+            <input
+              id="politics"
+              class="checkbox__input"
+              type="checkbox"
+              value="1"
+              checked
+              name="politics"
+            />
+            <label for="politics" class="checkbox__label"
+              ><span class="checkbox__text"
+                >Согласен с
+                <a href="" target="_blank"
+                  >политикой обработки персональных данных</a
+                ></span
+              ></label
+            >
+          </div>
+          <button type="submit" class="button">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

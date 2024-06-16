@@ -1,0 +1,31 @@
+.contact {
+  &__container {
+    max-width: rem(1420);
+    display: flex;
+    padding-top: rem(72);
+    border-radius: 0px rem(60) 0 0;
+    background-color: var(--clr-back-secondary);
+    padding-left: 0;
+  }
+
+  &__image {
+    flex: 0 0 rem(720);
+    border-radius: 0px rem(60) 0px 0px;
+    @extend %bg-cov;
+  }
+
+  &__content {
+    padding-left: rem(60);
+    padding-right: rem(50);
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(23, 45);
+    }
+  }
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: em(34, 18);
+    }
+  }
+}

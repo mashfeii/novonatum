@@ -5,7 +5,8 @@
       align-items: center;
       gap: rem(21);
     }
-    > ul > li > a {
+    > ul > li > a,
+    > ul > li > span {
       padding: rem(6) rem(12);
       border-radius: 17px;
 
@@ -22,10 +23,17 @@
           background-color: rgba(34, 86, 123, 0.5);
         }
       }
-
-      li.active & {
-        background: var(--clr-accent-primary);
-        color: var(--clr-white);
+    }
+    > ul > li.active > span,
+    > ul > li.active > a {
+      cursor: default;
+      background-color: var(--clr-accent-primary);
+      color: var(--clr-white);
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--clr-white);
+          background-color: var(--clr-accent-primary);
+        }
       }
     }
 
