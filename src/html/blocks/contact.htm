@@ -10,56 +10,58 @@
         Отправьте сообщение и мы свяжемся с вами в самое ближайшее время
       </p>
       <form class="contact__form form">
-        <div class="form__row">
+        <div class="form__content">
+          <div class="form__row">
+            <div class="form__item">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Ваше имя"
+                required
+                class="form__input input"
+              />
+            </div>
+            <div class="form__item">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Ваш e-mail"
+                required
+                class="form__input input"
+              />
+            </div>
+          </div>
           <div class="form__item">
-            <input
+            <textarea
               type="text"
-              name="name"
-              id="name"
-              placeholder="Ваше имя"
-              required
-              class="form__input input"
-            />
-          </div>
-          <div class="form__item">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Ваш e-mail"
-              required
-              class="form__input input"
-            />
-          </div>
-        </div>
-        <div class="form__item">
-          <textarea
-            type="text"
-            name="message"
-            id="message"
-            class="form__input input input--extended"
-          >
+              name="message"
+              id="message"
+              class="form__input input input--extended"
+            >
 Ваше сообщение</textarea
-          >
+            >
+          </div>
+          <label class="form__file">
+            <input
+              type="file"
+              name="file"
+              id="file"
+              accept=".jpg,.jpeg,.png,.heic,.pdf,.docx,.txt"
+            />
+            <span class="form__file-button">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#file" />
+              </svg>
+              <span>Прикрепить файл</span>
+            </span>
+            <span class="form__file-text"
+              >форматы файлов: jpg, png, heic, pdf, txt, docx; вес файла до
+              10МБ</span
+            >
+          </label>
         </div>
-        <label class="form__file">
-          <input
-            type="file"
-            name="file"
-            id="file"
-            accept=".jpg,.jpeg,.png,.heic,.pdf,.docx,.txt"
-          />
-          <span class="form__file-button">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#file" />
-            </svg>
-            <span>Прикрепить файл</span>
-          </span>
-          <span class="form__file-text"
-            >форматы файлов: jpg, png, heic, pdf, txt, docx; вес файла до
-            10МБ</span
-          >
-        </label>
         <div class="form__politics">
           <div class="checkbox">
             <input
@@ -79,7 +81,7 @@
               ></label
             >
           </div>
-          <button type="submit" class="button">Отправить</button>
+          <button type="submit" class="form__button button">Отправить</button>
         </div>
       </form>
     </div>
