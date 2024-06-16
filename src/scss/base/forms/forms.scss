@@ -2,11 +2,31 @@
 // Снипет (HTML):
 .form {
   @extend %fl-c;
-  gap: rem(24);
+  gap: rem(29);
+
+  //== 440px ==//
+  @media (max-width: $mb-s) {
+    gap: rem(18);
+  }
+
+  &__content {
+    @extend %fl-c;
+    gap: rem(23);
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      gap: rem(14);
+    }
+  }
 
   &__row {
     display: flex;
     gap: rem(14);
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      gap: rem(7);
+    }
   }
   &__item {
     flex: 1 1 auto;
@@ -14,6 +34,12 @@
   &__file {
     @extend %fl-r-ct;
     gap: rem(14);
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      flex-direction: column;
+      gap: rem(7);
+    }
   }
   &__file input[type="file"] {
     position: absolute;
@@ -24,7 +50,9 @@
     height: 0;
   }
   &__file-button {
+    cursor: pointer;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     gap: rem(14);
     padding: rem(14) rem(32) rem(14) rem(19);
@@ -33,20 +61,89 @@
 
     font-family: "CenturyGothic";
     font-weight: 700;
-    @include adaptiveValue("font-size", 15, 14);
+    @include adaptiveValue("font-size", 15, 13);
     line-height: math.div(18, 15);
     color: var(--clr-white);
+    transition: background-color 0.32s ease-in-out;
+
     svg {
       flex: 0 0 rem(18);
       width: rem(18);
       height: rem(20);
       fill: var(--clr-white);
+
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        flex: 0 0 rem(15);
+        width: rem(15);
+        height: rem(17);
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--clr-accent-secondary);
+      }
+    }
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      width: 100%;
     }
   }
   &__file-text {
     max-width: rem(253);
     @include adaptiveValue("font-size", 14, 12);
     line-height: math.div(21, 14);
+  }
+  &__button {
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      width: 100%;
+    }
+  }
+  &__politics {
+    @extend %fl-r-ctb;
+    gap: rem(20);
+    padding: rem(32) rem(30);
+    background-color: var(--clr-accent-primary);
+    border-radius: 0px 0px rem(60) 0px;
+
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      border-radius: 0 0 rem(40) 0;
+    }
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding: rem(20);
+      flex-direction: column-reverse;
+      gap: rem(12);
+    }
+
+    .checkbox__label {
+      &::before {
+        border-color: var(--clr-white);
+      }
+      &::after {
+        background-color: var(--clr-white);
+      }
+    }
+
+    .checkbox__text {
+      @include adaptiveValue("font-size", 12, 10);
+      color: var(--clr-white);
+      a {
+        &:link,
+        &:visited {
+          text-decoration: underline;
+        }
+        &:hover,
+        &:target {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 //</FORM>

@@ -5,27 +5,121 @@
     padding-top: rem(72);
     border-radius: 0px rem(60) 0 0;
     background-color: var(--clr-back-secondary);
+    padding-right: 0;
     padding-left: 0;
+    border-radius: 0 0 rem(60) 0;
+
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      padding-top: rem(40);
+      border-radius: 0 0 rem(40) 0;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-top: 0;
+      flex-direction: column;
+      border-radius: 0 rem(40) rem(40) 0;
+    }
   }
 
   &__image {
     flex: 0 0 rem(720);
     border-radius: 0px rem(60) 0px 0px;
     @extend %bg-cov;
+
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      flex: 0 0 rem(520);
+      border-radius: 0 rem(40) 0 0;
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex: 0 0 rem(360);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      flex: 0 0 rem(240);
+    }
+    //== 370px ==//
+    @media (max-width: $mb-xs) {
+      flex: 0 0 rem(200);
+    }
   }
 
   &__content {
+    flex: 1 1 auto;
+    .form__content {
+      padding-left: rem(60);
+      padding-right: rem(50);
+
+      @media (max-width: em(1099.98)) {
+        padding-left: rem(30);
+        padding-right: rem(30);
+      }
+      //== 370px ==//
+      @media (max-width: $mb-xs) {
+        padding-left: rem(20);
+        padding-right: rem(20);
+      }
+    }
+    .form__politics {
+      padding: rem(28) rem(50) rem(35) rem(61);
+      @media (max-width: em(1099.98)) {
+        padding-left: rem(30);
+        padding-right: rem(30);
+      }
+      //== 370px ==//
+      @media (max-width: $mb-xs) {
+        padding-left: rem(20);
+        padding-right: rem(20);
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+      }
+    }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-top: rem(40);
+    }
+    //== 370px ==//
+    @media (max-width: $mb-xs) {
+      padding-top: rem(25);
+    }
+  }
+  &__title,
+  &__description {
     padding-left: rem(60);
     padding-right: rem(50);
+    @media (max-width: em(1099.98)) {
+      padding-left: rem(30);
+      padding-right: rem(30);
+    }
+    //== 370px ==//
+    @media (max-width: $mb-xs) {
+      padding-left: rem(20);
+      padding-right: rem(20);
+    }
   }
   &__title {
     &:not(:last-child) {
       margin-bottom: em(23, 45);
+
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        margin-bottom: rem(6);
+      }
     }
   }
   &__description {
     &:not(:last-child) {
       margin-bottom: em(34, 18);
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        margin-bottom: rem(15);
+      }
     }
   }
 }

@@ -4,6 +4,11 @@
       display: flex;
       align-items: center;
       gap: rem(21);
+
+      //== 992px ==//
+      @media (max-width: $tb) {
+        gap: rem(18);
+      }
     }
     > ul > li > a,
     > ul > li > span {
