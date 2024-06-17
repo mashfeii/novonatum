@@ -1,9 +1,18 @@
 .card {
+  @media (any-hover: hover) {
+    &:hover {
+      .card__image {
+        border-color: rgba(83, 162, 219, 0.6);
+      }
+    }
+  }
   &__image {
     overflow: hidden;
     @extend %ibg;
     padding-bottom: percent(224, 294);
     border-radius: rem(20) rem(5);
+    border: 2px dashed transparent;
+    transition: border-color 0.32s ease;
 
     &:not(:last-child) {
       margin-bottom: rem(18);

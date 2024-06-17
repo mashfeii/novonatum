@@ -47,4 +47,17 @@
   &.button--extended {
     padding: rem(14) rem(75);
   }
+
+  &:disabled {
+    cursor: default;
+    filter: grayscale(1);
+    opacity: 0.6;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--clr-accent-secondary);
+        border-radius: rem(5) rem(20);
+      }
+    }
+  }
 }
