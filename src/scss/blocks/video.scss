@@ -1,16 +1,18 @@
 .video {
+  &.video--alone {
+    padding-top: rem(42);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      padding-top: rem(20);
+    }
+  }
   &__body {
     display: flex;
     gap: rem(36);
 
     .video--alone & {
-      margin-top: rem(86);
       position: relative;
       justify-content: center;
-      //== 576px ==//
-      @media (max-width: $mb-m) {
-        margin-top: rem(40);
-      }
       &::before {
         content: "";
         position: absolute;

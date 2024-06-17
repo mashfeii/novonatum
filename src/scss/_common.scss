@@ -155,6 +155,14 @@
   border-radius: 100%;
   background-color: var(--clr-accent-secondary);
 
+  &.swiper-button--white {
+    background-color: var(--clr-white);
+
+    svg {
+      fill: var(--clr-accent-primary);
+    }
+  }
+
   //== 1200px ==//
   @media (max-width: $note-m) {
     flex: 0 0 rem(42);
