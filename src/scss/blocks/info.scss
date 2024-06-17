@@ -1,0 +1,65 @@
+.info {
+  &__title {
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: math.div(30, 24);
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: em(69, 24);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: rem(36);
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex-direction: column;
+      gap: rem(25);
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    p:not(:last-child) {
+      &:not(:last-child) {
+        margin-bottom: em(11, 18);
+      }
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    flex: 0 0 rem(511);
+    border-radius: rem(20) rem(5);
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex: 0 0 rem(400);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      flex: 0 0 rem(360);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex: 0 0 rem(280);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      flex: 0 0 rem(220);
+    }
+  }
+}
