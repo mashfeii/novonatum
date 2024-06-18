@@ -1,11 +1,230 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
+<div id="markets" aria-hidden="true" class="popup popup--markets">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <div class="popup__markets">
+        <span class="popup__markets-text f-24-400">
+          Выберите удобный для вас магазин:</span
+        >
+        <a
+          href="javascript:void(0);"
+          class="popup__markets-item partner-link partner-link--ozon"
+        >
+          <img src="@img/partners/ozon-light.svg" alt="" />
+        </a>
+        <a
+          href="javascript:void(0);"
+          class="popup__markets-item partner-link partner-link--wb"
+        >
+          <img src="@img/partners/wb-light.png" alt="" />
+        </a>
+        <a href="javascript:void(0);" class="popup__markets-item partner-link">
+          <img src="@img/partners/eapteka.png" alt="" />
+        </a>
+        <a href="javascript:void(0);" class="popup__markets-item partner-link">
+          <img src="@img/partners/market.png" alt="" />
+        </a>
+        <a
+          href="javascript:void(0);"
+          class="popup__markets-item partner-link partner-link--zdravcity"
+        >
+          <img src="@img/partners/zdravcity-light.png" alt="" />
+        </a>
+        <a
+          href="javascript:void(0);"
+          class="popup__markets-item partner-link partner-link--detmir"
+        >
+          <img src="@img/partners/detmir-bg.png" alt="" />
+        </a>
+        <a
+          href="javascript:void(0);"
+          class="popup__markets-item partner-link partner-link--aptekaru"
+        >
+          <img src="@img/partners/aptekaru.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
- -->
+<div id="question" aria-hidden="true" class="popup popup--question">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <form class="popup__form form">
+        <div class="form__content">
+          <div class="form__row">
+            <div class="form__item">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Ваше имя"
+                required
+                class="form__input input"
+              />
+            </div>
+            <div class="form__item">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Ваш e-mail"
+                required
+                class="form__input input"
+              />
+            </div>
+          </div>
+          <div class="form__item">
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              class="form__input input input--extended"
+              placeholder="Ваше сообщение"
+            ></textarea>
+          </div>
+          <label class="form__file">
+            <input
+              type="file"
+              name="file"
+              id="file"
+              accept=".jpg,.jpeg,.png,.heic,.pdf,.docx,.txt"
+            />
+            <span class="form__file-button">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#file" />
+              </svg>
+              <span>Прикрепить файл</span>
+            </span>
+            <span class="form__file-text"
+              >форматы файлов: jpg, png, heic, pdf, txt, docx; вес файла до
+              10МБ</span
+            >
+          </label>
+        </div>
+        <div class="form__politics">
+          <div class="checkbox">
+            <input
+              id="politics"
+              class="checkbox__input"
+              type="checkbox"
+              value="1"
+              checked
+              name="politics"
+            />
+            <label for="politics" class="checkbox__label"
+              ><span class="checkbox__text"
+                >Согласен с
+                <a href="" target="_blank"
+                  >политикой обработки персональных данных</a
+                ></span
+              ></label
+            >
+          </div>
+          <button type="submit" class="form__button button">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="modal-consult" aria-hidden="true" class="popup popup--consult">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <div class="popup__consult">
+        <h2 class="popup__consult-title">Получить консультацию</h2>
+        <p class="popup__consult-description f-18-400">
+          Задайте любые интересующие вас вопросы или позвоните на бесплатную
+          горячую линию
+        </p>
+        <a href="tel:+78002502872" class="popup__consult-phone">
+          <svg>
+            <use xlink:href="@img/icons/icons.svg#phone" />
+          </svg>
+          <span>8-800-250 2872</span>
+        </a>
+        <form action="#" class="popup__consult-form">
+          <textarea
+            name="popup-consult"
+            id="popup-consult"
+            class="input"
+            required
+            placeholder="Ваше сообщение"
+          ></textarea>
+          <button type="submit" class="popup__consult-button button button--fw">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-success" aria-hidden="true" class="popup popup--notify">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <div class="popup__notify">
+        <div
+          class="popup__notify-icon"
+          style="background-image: url(&quot;@img/icons/success.svg&quot;)"
+        ></div>
+        <h2 class="popup__notify-title title">
+          Ваше сообщение успешно отправлено!
+        </h2>
+        <p class="popup__notify-description f-18-400">
+          Мы получили ваше обращение, скоро наш менеджер с вами свяжется
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-error" aria-hidden="true" class="popup popup--notify">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <div class="popup__notify">
+        <div
+          class="popup__notify-icon"
+          style="background-image: url(&quot;@img/icons/error.svg&quot;)"
+        ></div>
+        <h2 class="popup__notify-title title">Возникла ошибка</h2>
+        <p class="popup__notify-description f-18-400">
+          Попробуйте отправить сообщение еще раз
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-message" aria-hidden="true" class="popup popup--message">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <div class="popup__message">
+        <h2 class="popup__message-title f-24-700">
+          Наш менеджер ответит на ваши вопросы в ближайшее время
+        </h2>
+        <p class="popup__message-description f-18-400">
+          Выберите один из вариантов для связи:
+        </p>
+        <div class="popup__message-buttons">
+          <a href="javascript:void(0);" class="popup__message-button button">
+            <span
+              class="_icon"
+              style="background-image: url(&quot;@img/icons/mail.svg&quot;)"
+            ></span>
+            <span>Написать на почту</span>
+          </a>
+          <a href="javascript:void(0);" class="popup__message-button button">
+            <span
+              class="_icon"
+              style="
+                background-image: url(&quot;@img/icons/tg-rounded.svg&quot;);
+              "
+            ></span>
+            <span>Написать в Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
