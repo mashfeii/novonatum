@@ -148,6 +148,38 @@ function initSliders() {
     });
   }
 
+  if (document.querySelector(".video__slider")) {
+    document.querySelectorAll(".video__slider").forEach((slider) => {
+      const prevEl = slider
+        .closest(".video")
+        .querySelector(".swiper-button-prev");
+      const nextEl = slider
+        .closest(".video")
+        .querySelector(".swiper-button-next");
+      const pagination = slider
+        .closest(".video")
+        .querySelector(".swiper-pagination");
+
+      new Swiper(slider, {
+        modules: [Navigation, Pagination],
+        observer: true,
+        observeParents: true,
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 800,
+        navigation: {
+          prevEl: prevEl,
+          nextEl: nextEl,
+        },
+        pagination: {
+          el: pagination,
+          clickable: true,
+        },
+      });
+    });
+  }
+
   if (document.querySelector(".partner-info__slider")) {
     document.querySelectorAll(".partner-info__slider").forEach((slider) => {
       const prevEl = slider
