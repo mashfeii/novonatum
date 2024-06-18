@@ -55,6 +55,14 @@
 .f-24-400 {
   @extend %f-24-400;
 }
+%f-24-700 {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 24, 18);
+  line-height: math.div(28, 24);
+}
+.f-24-700 {
+  @extend %f-24-700;
+}
 %f-18-700 {
   font-weight: 700;
   @include adaptiveValue("font-size", 18, 16);

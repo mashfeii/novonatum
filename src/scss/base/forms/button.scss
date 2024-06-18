@@ -32,12 +32,17 @@
     padding-bottom: rem(10);
   }
 
-  svg {
+  svg,
+  span._icon {
     flex: 0 0 rem(22);
     width: rem(22);
     height: rem(22);
+  }
+  svg {
     fill: var(--clr-white);
-    object-fit: contain;
+  }
+  span._icon {
+    @extend %bg-con;
   }
 
   &.button--white {
@@ -46,6 +51,9 @@
   }
   &.button--extended {
     padding: rem(14) rem(75);
+  }
+  &.button--fw {
+    width: 100%;
   }
 
   &:disabled {

@@ -1,61 +1,277 @@
 body::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.8s ease 0s;
-	pointer-events: none;
-	z-index: 149;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
 }
 .popup-show body::after {
-	opacity: 1;
+  opacity: 1;
 }
 .popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
 }
 .popup_show {
-	z-index: 150;
-	visibility: visible;
-	overflow: auto;
-	pointer-events: auto;
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
 }
 .popup_show .popup__content {
-	visibility: visible;
-	transform: scale(1);
+  visibility: visible;
+  transform: scale(1);
 }
 .popup__wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100%;
-	flex: 1 1 auto;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__close {
+  position: absolute;
+  top: rem(30);
+  right: rem(30);
+  width: rem(14);
+  height: rem(14);
+  @extend %bg-con;
+  background-image: url("@img/icons/close.svg");
 }
 .popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
-	.lock & {
-		visibility: visible;
-	}
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  padding: rem(55) rem(52) rem(50);
+  width: 100%;
+  max-width: rem(664);
+  background-color: var(--clr-back-primary);
+  border-radius: rem(30);
+
+  //== 440px ==//
+  @media (max-width: $mb-s) {
+    padding: rem(45) rem(30) rem(40);
+  }
+
+  .popup--message & {
+    padding: rem(56) rem(50) rem(51);
+
+    @media (max-width: em(599.98)) {
+      padding: rem(60) rem(30) rem(40);
+    }
+  }
+
+  .popup--consult & {
+    padding: rem(41) rem(45) rem(54);
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding: rem(65) rem(25) rem(30);
+    }
+  }
+
+  .popup--question & {
+    padding: 0;
+    padding-top: rem(75);
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding-top: rem(65);
+    }
+  }
+
+  .popup--notify & {
+    padding: rem(34) rem(45) rem(47);
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding: rem(35) rem(25) rem(40);
+    }
+  }
+
+  .popup--markets & {
+    padding: rem(63) rem(44) rem(53);
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding: rem(65) rem(30) rem(40);
+    }
+    @media (max-width: em(399.98)) {
+      padding: rem(65) rem(15) rem(30);
+    }
+  }
+
+  .lock & {
+    visibility: visible;
+  }
+}
+.popup--question {
+  .form__content {
+    padding-left: rem(27);
+    padding-right: rem(27);
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding-left: rem(15);
+      padding-right: rem(15);
+    }
+  }
+  .form__politics {
+    border-radius: 0;
+  }
+}
+.popup__markets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rem(40);
+  row-gap: rem(29);
+
+  //== 768px ==//
+  @media (max-width: $mb) {
+    gap: rem(15);
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.popup__markets-text {
+  padding: rem(17) rem(25);
+  grid-column: span 2;
+  background-color: var(--clr-white);
+  border-radius: rem(20);
+}
+.popup__markets-item {
+  height: rem(95);
+}
+.popup__consult {
+  &-title {
+    font-family: "GothamPro";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 35, 24);
+    line-height: math.div(51, 35);
+    text-align: center;
+    color: var(--clr-accent-primary);
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(6);
+      }
+    }
+  }
+  &-description {
+    text-align: center;
+    max-width: rem(375);
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: em(15, 18);
+    }
+  }
+  &-phone {
+    @extend %fl-a-ct;
+    gap: rem(10);
+
+    font-weight: 700;
+    @include adaptiveValue("font-size", 30, 20);
+    line-height: math.div(44, 30);
+    color: var(--clr-accent-secondary);
+
+    svg {
+      flex: 0 0 rem(27);
+      height: rem(27);
+      fill: var(--clr-accent-secondary);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: em(30, 30);
+    }
+  }
+  &-form {
+    @extend %fl-c;
+    gap: rem(21);
+  }
+}
+.popup__notify {
+  &-icon {
+    margin: 0 auto;
+    width: rem(55);
+    height: rem(55);
+    @extend %bg-con;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &-title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(6);
+    }
+  }
+
+  &-description {
+    max-width: rem(400);
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.popup__message {
+  &-title {
+    font-family: "CenturyGothic";
+    color: var(--clr-accent-primary);
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: em(14, 24);
+    }
+  }
+
+  &-description {
+    max-width: rem(400);
+    margin: 0 auto;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: em(28, 18);
+    }
+  }
+
+  &-buttons {
+    @extend %fl-a-ct;
+    gap: rem(22);
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex-direction: column;
+      gap: rem(15);
+      align-items: stretch;
+    }
+  }
+
+  &-button {
+    padding: rem(14) rem(19);
+    font-weight: 500;
+  }
 }
