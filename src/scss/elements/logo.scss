@@ -30,6 +30,10 @@
     @media (max-width: $tb) {
       grid-row: 1;
     }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-row: span 2;
+    }
   }
 
   &__icon {
@@ -79,6 +83,10 @@
     //== 992px ==//
     @media (max-width: $tb) {
       display: none;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      display: block;
     }
   }
 }

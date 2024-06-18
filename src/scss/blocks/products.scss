@@ -36,6 +36,11 @@
       @media (max-width: $note-l) {
         column-gap: rem(25);
       }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        row-gap: rem(35);
+        column-gap: rem(15);
+      }
     }
 
     //== 1360px ==//
@@ -54,8 +59,8 @@
     }
     //== 576px ==//
     @media (max-width: $mb-m) {
-      grid-template-columns: 1fr;
       row-gap: rem(35);
+      column-gap: rem(15);
     }
   }
   &__card {
@@ -149,6 +154,31 @@
         }
       }
     }
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      .card-products__img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      .card-products__image {
+        height: rem(160);
+      }
+    }
+    @media (max-width: em(399.98)) {
+      .card-products__image {
+        padding: rem(10) rem(15);
+      }
+    }
+    //== 370px ==//
+    @media (max-width: $mb-xs) {
+      .card-products__image {
+        height: rem(130);
+      }
+    }
   }
 
   &__pagging {
@@ -161,10 +191,6 @@
     //== 992px ==//
     @media (max-width: $tb) {
       grid-column: span 2;
-    }
-    //== 576px ==//
-    @media (max-width: $mb-m) {
-      grid-column: span 1;
     }
   }
 }

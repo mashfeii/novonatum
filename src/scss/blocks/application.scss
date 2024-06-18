@@ -60,6 +60,19 @@
     @media (max-width: $mb-m) {
       padding-left: rem(20);
     }
+    @media (max-width: em(479.98)) {
+      flex: 0 0 rem(300);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      flex: 0 0 rem(260);
+      gap: rem(10);
+    }
+    @media (max-width: em(389.98)) {
+      flex: 0 0 rem(220);
+      padding-left: rem(10);
+      border-radius: rem(5) rem(30);
+    }
   }
   &__image-content {
     @extend %fl-r-ct;
@@ -81,6 +94,10 @@
 
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: rem(5) 0 rem(5) rem(60);
+
+        @media (max-width: em(479.98)) {
+          border-radius: rem(5) 0 rem(5) rem(30);
+        }
       }
 
       font-family: "GothamPro";
@@ -93,6 +110,15 @@
       //== 1200px ==//
       @media (max-width: $note-m) {
         padding-left: rem(20);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: em(389.98)) {
+        padding-left: rem(10);
       }
     }
   }
@@ -112,10 +138,18 @@
       flex: 0 0 rem(200);
       height: rem(230);
     }
-    //== 440px ==//
-    @media (max-width: $mb-s) {
+    @media (max-width: em(479.98)) {
       flex: 0 0 rem(160);
       height: rem(186);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      flex: 0 0 rem(130);
+      height: rem(151);
+    }
+    @media (max-width: em(389.98)) {
+      flex: 0 0 rem(115);
+      height: rem(134);
     }
   }
 }
