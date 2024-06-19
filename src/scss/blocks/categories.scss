@@ -66,6 +66,12 @@
   }
 
   &__card {
+    transition: transform 0.32s ease-in-out;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translateY(rem(-10));
+      }
+    }
     position: relative;
     display: block;
     border-radius: rem(10) rem(60);

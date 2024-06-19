@@ -173,6 +173,10 @@
     @media (max-width: $mb-m) {
       margin-left: 0;
       row-gap: rem(75);
+
+      .benefits--text & {
+        grid-template-columns: 1fr;
+      }
     }
     //== 440px ==//
     @media (max-width: $mb-s) {
