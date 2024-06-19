@@ -1,5 +1,5 @@
 import imagemin from "gulp-imagemin";
-import webp from "gulp-webp";
+import webp from "gulp-webp-html-nosvg";
 
 export const images = () => {
   return app.gulp
