@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window["FLS"] = true;
+// window["FLS"] = true;
 
 // Подключение основного файла стилей
 // import "../scss/media.scss";
@@ -175,8 +175,8 @@ import "./files/scroll/lazyload.js";
 Примеры по работе с библиотекой: https://wowjs.uk/
 
 */
-// import "./libs/aos.js";
-// import "./libs/wow.js";ё
+import "./libs/aos.js";
+// import "./libs/wow.js";
 
 // Функции работы скроллом
 import * as flsScroll from "./files/scroll/scroll.js";
