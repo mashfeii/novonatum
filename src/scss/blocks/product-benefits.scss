@@ -24,11 +24,13 @@
     position: relative;
     z-index: 2;
     flex: 0 0 rem(400);
+    height: rem(470);
 
     img,
     picture {
       max-width: 100%;
       height: 100%;
+      object-fit: contain;
     }
 
     &::before {
@@ -49,16 +51,12 @@
     }
     //== 992px ==//
     @media (max-width: $tb) {
-      max-height: rem(430);
       max-width: 70%;
     }
     //== 768px ==//
     @media (max-width: $mb) {
       max-height: rem(370);
-    }
-    //== 576px ==//
-    @media (max-width: $mb-m) {
-      max-height: rem(300);
+      height: rem(270);
     }
   }
 
