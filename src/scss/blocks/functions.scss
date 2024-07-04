@@ -1,0 +1,89 @@
+.functions {
+  &__header {
+    .title {
+      max-width: rem(990);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(80);
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: rem(91);
+  }
+
+  &__image {
+    flex: 0 0 rem(377);
+    @extend %fl-c;
+    gap: rem(28);
+  }
+  &__image-container {
+    position: relative;
+    @extend %fl-a-ct;
+    z-index: 2;
+    height: rem(377);
+    background: var(--clr-back-secondary);
+    border-radius: rem(5) rem(60);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::before {
+      top: rem(-14);
+      left: rem(-40);
+      width: rem(185);
+      height: rem(87);
+      background: var(--clr-accent-primary);
+      border-radius: rem(10) rem(60);
+    }
+    &::after {
+      width: rem(213);
+      height: rem(250);
+      left: rem(-24);
+      bottom: rem(-37);
+      background-color: var(--clr-white);
+      border-radius: rem(20);
+    }
+  }
+  &__image-cover {
+    position: absolute;
+    z-index: -1;
+    top: rem(73);
+    left: 0;
+    width: 76%;
+    height: 54%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: rem(5) rem(60) rem(5) 0;
+  }
+  &__image-text {
+    font-family: "GothamPro";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 180, 60);
+    line-height: math.div(172, 180);
+    color: var(--clr-accent-primary);
+
+    small {
+      @include adaptiveValue("font-size", 100, 30);
+    }
+  }
+  &__img {
+    width: 70%;
+    height: 85%;
+    object-fit: contain;
+  }
+  &__button {
+    position: relative;
+    z-index: 2;
+
+    svg {
+      flex: 0 0 rem(10);
+      width: rem(10);
+      height: rem(6);
+    }
+  }
+}
