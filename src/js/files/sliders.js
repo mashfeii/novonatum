@@ -110,6 +110,51 @@ function initSliders() {
     });
   }
 
+  if (document.querySelector(".oportunities__slider")) {
+    document.querySelectorAll(".oportunities__slider").forEach((slider) => {
+      const prevEl = slider
+        .closest(".oportunities")
+        .querySelector(".swiper-button-prev");
+      const nextEl = slider
+        .closest(".oportunities")
+        .querySelector(".swiper-button-next");
+
+      new Swiper(slider, {
+        modules: [Navigation],
+        observer: true,
+        observeParents: true,
+        loop: true,
+        slidesPerView: 3.1,
+        spaceBetween: 31,
+        speed: 800,
+        navigation: {
+          prevEl: prevEl,
+          nextEl: nextEl,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 1.5,
+          },
+          660: {
+            autoHeight: true,
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1200: {
+            spaceBetween: 31,
+          },
+        },
+      });
+    });
+  }
+
   if (document.querySelector(".reviews__slider")) {
     document.querySelectorAll(".reviews__slider").forEach((slider) => {
       const prevEl = slider
@@ -124,7 +169,6 @@ function initSliders() {
         observer: true,
         observeParents: true,
         loop: true,
-        autoHeight: true,
         slidesPerView: 2,
         spaceBetween: 31,
         speed: 800,
@@ -134,10 +178,12 @@ function initSliders() {
         },
         breakpoints: {
           320: {
+            autoHeight: true,
             slidesPerView: 1,
             spaceBetween: 10,
           },
           992: {
+            autoHeight: false,
             slidesPerView: 2,
             spaceBetween: 15,
           },
@@ -220,7 +266,7 @@ function initSliders() {
   }
 }
 
-window.addEventListener("load", function(e) {
+window.addEventListener("load", function (e) {
   // Запуск инициализации слайдеров
   initSliders();
   // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
