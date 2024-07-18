@@ -29,18 +29,23 @@
   }
 
   &__list {
-    gap: rem(4);
+    gap: rem(1);
     display: flex;
     align-items: center;
 
-    @media (max-width: em(489.98)) {
+    @media (max-width: $mb-m) {
       flex-wrap: wrap;
+      justify-content: center;
       column-gap: rem(12);
       row-gap: rem(2);
     }
+
+    @media (max-width: em(489.98)) {
+      justify-content: flex-start;
+    }
   }
   &__link {
-    padding: rem(6) rem(12);
+    padding: rem(6) rem(8);
     border-radius: 17px;
 
     font-size: rem(16);

@@ -35,7 +35,7 @@
     > ul {
       display: flex;
       align-items: center;
-      gap: rem(21);
+      gap: rem(1);
 
       //== 992px ==//
       @media (max-width: $tb) {
