@@ -184,4 +184,8 @@
       height: rem(42);
     }
   }
+  &__slide-text {
+    max-height: 22ex;
+    overflow: hidden;
+  }
 }
