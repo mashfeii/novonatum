@@ -81,6 +81,7 @@
   }
 
   &__slide {
+    min-height: rem(300);
     padding: rem(30) rem(43) rem(71) rem(66);
     background: var(--clr-white);
     border-radius: rem(60);
@@ -88,6 +89,10 @@
     //== 1200px ==//
     @media (max-width: $note-m) {
       padding: rem(30) rem(35) rem(40);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      min-height: 0;
     }
     //== 576px ==//
     @media (max-width: $mb-m) {

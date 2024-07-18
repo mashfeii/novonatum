@@ -124,6 +124,7 @@ function initSliders() {
         observer: true,
         observeParents: true,
         loop: true,
+        autoHeight: true,
         slidesPerView: 2,
         spaceBetween: 31,
         speed: 800,
@@ -219,7 +220,7 @@ function initSliders() {
   }
 }
 
-window.addEventListener("load", function (e) {
+window.addEventListener("load", function(e) {
   // Запуск инициализации слайдеров
   initSliders();
   // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
