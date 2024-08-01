@@ -68,6 +68,21 @@ function initSliders() {
     authorSlider.controller.control = textSlider;
   }
 
+  if (document.querySelector(".dosage__slider")) {
+    new Swiper(".dosage__slider", {
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 600,
+      navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      },
+    });
+  }
   if (document.querySelector(".overview__slider-thumbs")) {
     const thumbsSlider = new Swiper(".overview__slider-thumbs", {
       modules: [Thumbs],
